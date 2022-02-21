@@ -16,15 +16,14 @@ html, body{
 body{
     display: grid;
     justify-items: center;
-    align-items: center;
-    height: 100vh;
     background: var(--black);
 }
 main{
+    margin-top: 5rem;
     width: 450px;
     height: fit-content;
     background-color: var(--yellow);
-    /* position: relative; */
+    position: relative;
     padding: 3.5rem 3.7rem 2.3rem 3.7rem;
     display: flex;
     flex-direction: column;
@@ -36,11 +35,10 @@ main{
     width: 450px;
     height: fit-content;
     background-color: white;
-    /* position: absolute; */
-    top: 160px;
-    right: -60px;
+    top: 10px;
+    right: -10px;
     border-radius: 2px;
-   
+   position: relative;
 }
 form{
     display: flex;
@@ -53,8 +51,8 @@ form{
     width: 65px;
     border-radius: 50%;
     position: absolute;
-    /* top: -40px;
-    left: 35px; */
+    top: -40px;
+    left: 30px;
 }
 
 .head{
@@ -65,35 +63,67 @@ form{
 }
 .close{
     font-size: 1.2rem;
-    opacity: 0.8;
+    opacity: 0.6;
 }
+.close:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
 
 .title{
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+    font-size: 12px;
+    color: var(--gray);
+    font-weight: bold;
 }
+
 
 input{
     border: none;
     border-bottom: 0.1rem solid var(--gray);
 }
-.first-last{
-    display: flex;
-
+textarea{
+    border: none;
+    border-bottom: 0.1rem solid var(--gray);
+    resize: vertical;
+}
+input::placeholder{
+    font-size: 12px;
+    color: var(--gray);
+}
+textarea:focus, input:focus{
+    outline: none;
+    font-weight: bold;
 }
 
+.first-last{
+    display: flex;
+}
+
+.first-last input{
+    width: 200px;
+}
+
+.bio{
+    border: none;
+}
 .footer{
     margin-top: 2rem;
     display: flex;
     column-gap: 30px;
     margin-left: auto;
     font-size: 1.4rem;
+}
+.footer>span{
     opacity: 0.5;
 }
-
-textarea{
-    border: none;
-    border-bottom: 0.1rem solid var(--gray);
-    resize: vertical;
+.cancel:hover, .save:hover{
+    opacity: 1;
+    cursor: pointer;
 }
+
+
+
